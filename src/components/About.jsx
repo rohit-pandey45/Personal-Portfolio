@@ -1,6 +1,6 @@
 import { section } from "framer-motion/client";
 import React from "react";
-import about from "../assets/about.png";
+import about from "../assets/abouttt.png";
 
 const About = ({ darkMode }) => {
   return (
@@ -87,7 +87,7 @@ const About = ({ darkMode }) => {
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold
                 text-orange-400"
               >
-                5+
+                3+
               </div>
               <div
                 className={`text-xs sm:text-sm lg:text-base
@@ -125,7 +125,7 @@ const About = ({ darkMode }) => {
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold
                 text-orange-400"
               >
-                5+
+                4+
               </div>
               <div
                 className={`text-xs sm:text-sm lg:text-base

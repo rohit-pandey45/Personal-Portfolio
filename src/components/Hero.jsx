@@ -164,7 +164,7 @@ const Hero = ({ darkMode }) => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-orange-500">15+</h3>
+              <h3 className="text-2xl font-bold text-orange-500">5+</h3>
               <p className={theme.textSecondary}>Projects</p>
             </div>
 
