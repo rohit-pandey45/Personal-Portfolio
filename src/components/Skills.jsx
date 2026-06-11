@@ -258,7 +258,7 @@ const Skills = ({ darkMode }) => {
                         className="w-16 h-16 rounded-xl p-3 flex
                       items-center justify-center
                       group-hover:scale-110 transition-transform
-                      duration-300"
+                      duration-300 shrink-0"
                       >
                         <Icon
                           size={40}
@@ -273,6 +273,7 @@ const Skills = ({ darkMode }) => {
                       >
                         {skill.name}
                       </h3>
+                      {/* </div> */}
                       <div
                         className="mb-2 flex justify-between
             items-center"
