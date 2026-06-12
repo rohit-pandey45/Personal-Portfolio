@@ -12,6 +12,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 .star-shape{
   clip-path: polygon(

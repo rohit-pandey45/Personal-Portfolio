@@ -1,8 +1,10 @@
-import { footer } from 'framer-motion/client';
+//import { footer } from 'framer-motion/client';
 import React from 'react'
 import { FaLinkedin } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { FaHeart } from 'react-icons/fa';
 
-const Footer = ({darkMode }) => {
+const Footer = ({ darkMode }) => {
     const currentYear = new Date().getFullYear();
   return (
     <footer
@@ -17,16 +19,18 @@ const Footer = ({darkMode }) => {
         <div className="container mx-auto px-4 py-8">
             <div className='flex flex-col md:flex-row justify-between
             items-center gap-6'>
+                {/*Logo & Headline */}
                 <div className="text-center md:text-left">
                     <h3
-                    className='text-2xl font-bold mb-2 text-orange-500
+                    className='text-2xl font-bold mb-2 text-orange-500 
                     dark:text-white'
-                    style={{
-                        background: 'linear-linear(to right, #f97316, #f59e0b)',
-                        WebkitBackgroundClip: 'text',
-                        backgroundClip: 'text',
-                        color: 'transparent'
-                    }}>
+                    // style={{
+                    //     background: 'linear-linear(to right, #f97316, #f59e0b)',
+                    //     WebkitBackgroundClip: 'text',
+                    //     backgroundClip: 'text',
+                    //     color: 'transparent'
+                    // }}
+                    >
                         Portfolio
                     </h3>
                     <p
@@ -61,12 +65,26 @@ const Footer = ({darkMode }) => {
                         <FaLinkedin />
                     </a>
                 </div>
+                <div className='text-center md:text-right'>
+                    <p className='text-sm flex items-center justify-end
+                    gap-1 text-[#6b7280] dark:text-[#9ca3af]'>
+                        @ {currentYear} Made with
+                        <FaHeart className="text-red-500"/>
+                        by <span
+                        className='mt-1 text-[#f97316]'>
+                            Rohit Pandey
+
+                        </span>
+
+                    </p>
+
+                </div>
             </div>
 
         </div>
 
     </footer>
-  )
-}
+  );
+};
 
 export default Footer

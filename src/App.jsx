@@ -4,8 +4,11 @@ import "aos/dist/aos.css";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
+import Education from "./components/Education.jsx";
+import Experience from "./components/Experience.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
+import Certifications from "./components/Certifications.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -24,6 +27,11 @@ const App = () => {
 
   useEffect(() => {
     AOS.refresh();
+    // if (darkMode) {
+    //   document.documentElement.classList.add("dark");
+    // } else {
+    //   document.documentElement.classList.remove("dark");
+    // }
   }, [darkMode]);
 
   const toggleDarkMode = () => {
@@ -43,8 +51,11 @@ const App = () => {
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero darkMode={darkMode} />
       <About darkMode={darkMode} />
+      <Education darkMode={darkMode} />
+      <Experience darkMode={darkMode} />
       <Skills darkMode={darkMode} />
       <Projects darkMode={darkMode}/>
+      <Certifications darkMode={darkMode}/>
       <Contact darkMode={darkMode}/>
       <Footer darkMode={darkMode}/>
     </div>
