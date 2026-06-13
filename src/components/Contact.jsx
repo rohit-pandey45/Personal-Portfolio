@@ -3,8 +3,29 @@ import contactImg from "../assets/contactt.png";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
-
 const Contact = ({ darkMode }) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      )
+      .then(() => {
+        alert("Message sent successfully!");
+        form.current.reset();
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("Failed to send message.");
+      });
+  };
+
   return (
     <section
       id="contact"
@@ -54,6 +75,8 @@ const Contact = ({ darkMode }) => {
 
           {/* RIGHT SIDE - FORM */}
           <form
+            ref={form}
+            onSubmit={sendEmail}
             style={{
               background: darkMode
                 ? "linear-gradient(to right, #1f2937, #111827)"
@@ -89,6 +112,7 @@ const Contact = ({ darkMode }) => {
             sm:gap-4 mb-3 sm:mb-4"
             >
               <input
+                name="first_name"
                 type="text"
                 placeholder="First Name"
                 style={{
@@ -104,6 +128,7 @@ const Contact = ({ darkMode }) => {
               />
 
               <input
+                name="last_name"
                 type="text"
                 placeholder="Last Name"
                 style={{
@@ -119,6 +144,7 @@ const Contact = ({ darkMode }) => {
               />
               {/*Email */}
               <input
+                name="email"
                 type="email"
                 placeholder="Email Address"
                 style={{
@@ -135,6 +161,7 @@ const Contact = ({ darkMode }) => {
               />
               {/*Phone Number */}
               <input
+              name="phone"
                 type="tel"
                 placeholder="Phone Number"
                 style={{
@@ -150,39 +177,39 @@ const Contact = ({ darkMode }) => {
                 required
               />
             </div>
-              {/*Message */}
-              <textarea
-                rows="4"
-                placeholder="Your Message"
-                style={{
-                  backgroundColor: darkMode ? "#374151" : "#faede3",
-                  borderColor: darkMode ? "#4b5563" : "#d1d5db",
-                  color: darkMode ? "white" : "#1f2937",
-                }}
-                className="w-full px-3 sm:px-4 py-2 sm:py-3
+            {/*Message */}
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Your Message"
+              style={{
+                backgroundColor: darkMode ? "#374151" : "#faede3",
+                borderColor: darkMode ? "#4b5563" : "#d1d5db",
+                color: darkMode ? "white" : "#1f2937",
+              }}
+              className="w-full px-3 sm:px-4 py-2 sm:py-3
               rounded-lg text-sm sm:text-base
               focus:border-orange-500 focus:ring-2
               focus:ring-orange-500/20 transition-all
               mb-3 sm:mb-6 resize-none"
-                required
-              />
+              required
+            />
 
-              <button
-                type="submit"
-                style={{
-                  background: "linear-gradient(to right, #f97316, #f59e0b)",
-                }}
-                className="w-full py-4 mt-4 text-white font-semibold rounded-xl
+            <button
+              type="submit"
+              style={{
+                background: "linear-gradient(to right, #f97316, #f59e0b)",
+              }}
+              className="w-full py-4 mt-4 text-white font-semibold rounded-xl
              hover:shadow-lg hover:shadow-orange-500/25
              transition-all"
-                // className="w-full py-2 sm:py-3 text-white
-                // font-semibold rounded-lg text-sm sm:text-base
-                // hover:shadow-lg hover:shadow-orange-500/25
-                // hover:scale-[1.02] transition-all"
-              >
-                Send Mesaage
-              </button>
-            
+              // className="w-full py-2 sm:py-3 text-white
+              // font-semibold rounded-lg text-sm sm:text-base
+              // hover:shadow-lg hover:shadow-orange-500/25
+              // hover:scale-[1.02] transition-all"
+            >
+              Send Mesaage
+            </button>
           </form>
         </div>
       </div>

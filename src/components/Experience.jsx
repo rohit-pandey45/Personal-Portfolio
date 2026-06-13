@@ -1,4 +1,5 @@
 import React from 'react';
+import { Calendar } from 'lucide-react';
 
 const Experience = () => {
   const experienceData = [
@@ -25,46 +26,55 @@ const Experience = () => {
   return (
     <section 
       id="experience" 
-      className="py-12 bg-transparent transition-colors duration-300"
+      className="py-16 bg-transparent transition-colors duration-300"
     >
-      <div className="container mx-auto px-4 max-w-4xl">
+      {/* Expanded max-w to 6xl to fill the layout canvas cleanly */}
+      <div className="container mx-auto px-4 max-w-6xl">
         
-        {/* Section Heading */}
-        <div className="border-b border-black dark:border-gray-700 pb-2 mb-8">
-          <h2 className="text-2xl font-bold tracking-wide uppercase text-black dark:text-white">
+        {/* Section Heading with Accent Bar */}
+        <div className="border-b border-gray-800 pb-4 mb-10 relative">
+          <h2 className="text-3xl font-bold tracking-wide uppercase text-white">
             Work Experience
           </h2>
+          <div className="absolute bottom-0 left-0 w-16 h-[3px] bg-orange-500"></div>
         </div>
 
         {/* Experience Grid Layout */}
-        <div className="grid md:grid-cols-2 gap-6 text-black dark:text-white">
+        <div className="grid md:grid-cols-2 gap-8 text-white">
           {experienceData.map((experience, index) => (
             <div 
               key={index} 
-              className="bg-white/50 dark:bg-gray-800/40 backdrop-blur-xs rounded-xl p-6 border border-gray-200 dark:border-gray-700/60 shadow-xs hover:shadow-md hover:border-orange-500/50 dark:hover:border-orange-500/50 transition-all duration-300 flex flex-col justify-between"
+              className="relative bg-[#111827] rounded-2xl p-8 border border-gray-800 shadow-xl hover:border-orange-500/30 transition-all duration-300 flex flex-col justify-between min-h-[340px] overflow-hidden"
             >
+              {/* Bottom Solid Orange Border Accent Line */}
+              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-orange-500"></div>
+
               <div>
-                {/* Timeline Tag */}
-                <div className="mb-3">
-                  <span className="text-xs font-semibold bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 px-2.5 py-1 rounded-full">
+                {/* Timeline Tag Row */}
+                <div className="mb-5">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold bg-orange-500/10 text-orange-400 px-3 py-1.5 rounded-full border border-orange-500/20">
+                    <Calendar className="w-3.5 h-3.5" />
                     {experience.dateRange}
                   </span>
                 </div>
 
-                {/* Role Title */}
-                <h3 className="text-xl font-bold text-gray-950 dark:text-white leading-snug">
+                {/* Role Title (Made Bigger) */}
+                <h3 className="text-2xl font-bold text-white tracking-tight leading-snug">
                   {experience.title}
                 </h3>
 
-                {/* Subtitle / Organization */}
-                <p className="text-sm font-medium text-orange-500 dark:text-orange-400 mt-1 mb-4">
+                {/* Subtitle / Organization (Made Bigger) */}
+                <p className="text-base font-semibold text-orange-500 dark:text-orange-400 mt-1.5 mb-5">
                   {experience.subtitle}
                 </p>
                 
-                {/* Bullet Points */}
-                <ul className="space-y-2.5 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300">
+                {/* Bullet Points with Enhanced Spacing & Readability */}
+                <ul className="space-y-3.5 list-disc pl-5 text-sm md:text-base text-gray-300 leading-relaxed">
                   {experience.points.map((point, pointIndex) => (
-                    <li key={pointIndex} className="leading-relaxed marker:text-orange-500 dark:marker:text-orange-400">
+                    <li 
+                      key={pointIndex} 
+                      className="marker:text-orange-500"
+                    >
                       {point}
                     </li>
                   ))}
