@@ -49,12 +49,14 @@ const Education = () => {
         </div>
 
         {/* Education Boxes Layout */}
-        <div className="grid md:grid-cols-3 gap-6 text-black dark:text-white">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           {educationData.map((item, index) => (
             <div 
               key={index} 
-              className="relative bg-white dark:bg-[#0a1020] rounded-2xl p-7 border border-gray-200 dark:border-gray-800 shadow-xl hover:shadow-2xl hover:border-orange-500/40 transition-all duration-300 flex flex-col justify-between min-h-[400px] overflow-hidden group"
+              className="relative bg-white/5 backdrop-blur-xl rounded-2xl p-7 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.35)] hover:border-orange-500/40 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between min-h-[450px] overflow-hidden group"
             >
+              {/* <div className="absolute inset-0 -z-10 bg-blue-500/10 blur-3xl"></div>
+              <div className="absolute top-0 right-0 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl"></div> */}
               {/* Bottom Orange Border Accent */}
               <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange-500 to-amber-500 transform scale-x-100 group-hover:scale-x-105 transition-transform duration-300"></div>
 

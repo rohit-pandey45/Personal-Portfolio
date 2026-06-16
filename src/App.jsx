@@ -9,6 +9,7 @@ import Experience from "./components/Experience.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import Certifications from "./components/Certifications.jsx";
+import Cocurricular from "./components/Cocurricular.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -56,6 +57,7 @@ const App = () => {
       <Skills darkMode={darkMode} />
       <Projects darkMode={darkMode}/>
       <Certifications darkMode={darkMode}/>
+      <Cocurricular darkMode={darkMode}/>
       <Contact darkMode={darkMode}/>
       <Footer darkMode={darkMode}/>
     </div>

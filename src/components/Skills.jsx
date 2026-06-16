@@ -21,6 +21,7 @@ import {
   SiMongodb,
   SiCplusplus,
   SiMysql,
+  SiPython,
 } from "react-icons/si";
 
 import { TbLetterC } from "react-icons/tb";
@@ -113,6 +114,12 @@ const Skills = ({ darkMode }) => {
       name: "MongoDB",
       icon: SiMongodb,
       level: 75,
+      color: "from-green-600 to-green-800",
+    },
+    {
+      name: "Python",
+      icon: SiPython,
+      level: 70,
       color: "from-green-600 to-green-800",
     },
     {
