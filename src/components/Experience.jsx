@@ -1,67 +1,127 @@
-import React from 'react';
+import React from "react";
+import { Briefcase, Calendar } from "lucide-react";
 
-const Experience = () => {
+const Experience = ({ darkMode }) => {
   const experienceData = [
     {
       title: "Software Engineering Virtual Experience",
       subtitle: "Skyscanner (via Forage)",
-      dateRange: "2026", // Feel free to adjust the timeline
+      dateRange: "2026",
       points: [
-        "Built a responsive web application using React to display live flight search results dynamically.",
-        "Utilized and structured Skyscanner’s open-source design system components to build clean, consistent user interfaces.",
-        "Gained hands-on experience in frontend architecture, component layout lifecycle design, and responsive design systems."
+        "Utilized Skyscanner's Backpack React library to build responsive web application layouts following production-grade design system standards.",
+        "Developed a Java-based Dropwizard microservice to handle HTTP search requests and enable efficient filtering of travel-related data.",
+        "Built a native Android proof-of-concept application using Backpack mobile UI components to display interactive flight itineraries.",
+        "Designed high-fidelity wireframes and prototypes in Figma, focusing on usability and seamless collaboration between design and engineering teams.",
       ],
-    }
+    },
   ];
 
   return (
-    <section 
-      id="experience" 
-      className="py-20 scroll-mt-20 min-h-[50vh] flex flex-col justify-center bg-transparent text-black dark:text-white"
+    <section
+      id="experience"
+      className="py-20 px-4 sm:px-6 lg:px-8"
+      style={{
+        backgroundColor: darkMode ? "#111827" : "#f9fafb",
+      }}
     >
-      <div className="container mx-auto px-6 max-w-4xl w-full">
-        
-        {/* Futuristic Section Header */}
-        <div className="flex items-center gap-4 mb-12 group">
-          <div className="h-8 w-[4px] bg-orange-500 rounded-full transition-transform duration-300 group-hover:scale-y-125" />
-          <h2 className="text-3xl font-black tracking-tight uppercase">
-            Experience <span className="text-orange-500">.</span>
+      <div className="max-w-6xl mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-16" data-aos="fade-up">
+          <h2
+            className="text-3xl sm:text-4xl font-bold mb-4"
+            style={{
+              color: darkMode ? "white" : "#1f2937",
+            }}
+          >
+            My{" "}
+            <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
+              Experience
+            </span>
           </h2>
+
+          <p
+            className="max-w-2xl mx-auto text-lg"
+            style={{
+              color: darkMode ? "#d1d5db" : "#4b5563",
+            }}
+          >
+            Practical learning experiences that helped me strengthen my
+            software development, problem-solving, and system design skills.
+          </p>
         </div>
 
-        {/* Industrial Border Deck Block */}
-        <div className="max-w-2xl">
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical Line */}
+          <div
+            className="absolute left-5 top-0 bottom-0 w-1 rounded-full"
+            style={{
+              background:
+                "linear-gradient(to bottom, #f97316, #f59e0b)",
+            }}
+          ></div>
+
           {experienceData.map((exp, index) => (
-            <div 
-              key={index} 
-              className="neo-glow bg-white dark:bg-gray-900/40 border-t-4 border-t-orange-500 border border-gray-200 dark:border-gray-800 rounded-xl p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-1"
+            <div
+              key={index}
+              className="relative pl-16 mb-12"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-4">
-                <div>
-                  <h3 className="text-2xl font-black text-gray-950 dark:text-white tracking-tight leading-snug">
-                    {exp.title}
-                  </h3>
-                  <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mt-1">
-                    {exp.subtitle}
-                  </p>
+              {/* Timeline Dot */}
+              <div className="absolute left-0 top-4">
+                <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center shadow-lg">
+                  <Briefcase className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xs font-mono font-bold bg-orange-500/10 text-orange-500 dark:text-orange-400 px-3 py-1 rounded-md border border-orange-500/20 whitespace-nowrap self-start">
-                  {exp.dateRange}
-                </span>
               </div>
-              
-              <ul className="space-y-3 mt-6 border-t border-gray-100 dark:border-gray-800/80 pt-4">
-                {exp.points.map((point, pointIndex) => (
-                  <li key={pointIndex} className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex items-start gap-2">
-                    <span className="text-orange-500 mt-1.5 text-xs">■</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
+
+              {/* Card */}
+              <div
+                className={`rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/50 ${
+                  darkMode
+                    ? "bg-gray-800 border-gray-700"
+                    : "bg-white border-gray-200"
+                }`}
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-orange-500">
+                      {exp.title}
+                    </h3>
+
+                    <p
+                      className="mt-1"
+                      style={{
+                        color: darkMode ? "#d1d5db" : "#4b5563",
+                      }}
+                    >
+                      {exp.subtitle}
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-2 mt-3 md:mt-0 text-orange-400">
+                    <Calendar size={18} />
+                    <span>{exp.dateRange}</span>
+                  </div>
+                </div>
+
+                <ul className="space-y-3">
+                  {exp.points.map((point, i) => (
+                    <li
+                      key={i}
+                      className={`flex items-start gap-3 ${
+                        darkMode ? "text-gray-300" : "text-gray-700"
+                      }`}
+                    >
+                      <span className="text-orange-500 mt-1">●</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -11,6 +11,7 @@ import {
   FaNodeJs,
   FaGitAlt,
   FaGithub,
+  FaCode,
 } from "react-icons/fa";
 
 import {
@@ -31,6 +32,7 @@ const Skills = ({ darkMode }) => {
   const skillCategories = [
     {
       title: "Frontend Development",
+      icon: <FaCode />,
       skills: [
         "HTML5",
         "CSS3",
@@ -43,14 +45,17 @@ const Skills = ({ darkMode }) => {
     },
     {
       title: "Backend Development",
+      icon: <SiMongodb />,
       skills: ["Node.js", "Express.js", "MongoDB", "MySQL"],
     },
     {
       title: "Programming & Problem Solving",
+      icon: <BsCodeSlash />,
       skills: ["C", "C++", "DSA", "OOP"],
     },
     {
       title: "Tools & Version Control",
+      icon: <FaGitAlt />,
       skills: ["Git", "GitHub"],
     },
   ];

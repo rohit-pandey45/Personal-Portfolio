@@ -12,46 +12,58 @@ const Projects = ({ darkMode }) => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      desc: "Built and deployed end-to-end projects demonstrating strong problem-solving skills",
+      title: "Full Stack GenAI Job Preparation Web Application",
+      desc: "Built an AI-powered job preparation platform featuring interview practice, personalized feedback, and skill-based question generation. Leveraged Generative AI to help users improve interview performance and track their preparation progress.",
       image: project1,
-      tags: ["React", "Node.js", "MongoDB"],
+      tags: ["React", "Node.js", "MongoDB", "Gemini API"],
+      // github: "https://github.com/yourusername/project1",
+      // demo: "https://project1.vercel.app",
     },
     {
       id: 2,
-      title: "Fitness Tracker App",
-      desc: "Built and deployed end-to-end projects demonstrating strong problem-solving skills",
+      title: "AI Resume Analyzer",
+      desc: "Building an AI-driven resume screening application that analyzes resumes, matches them with job descriptions, and generates actionable feedback. Designed to help candidates improve ATS compatibility and strengthen their job application profiles.",
       image: project2,
-      tags: ["React", "Node.js", "MongoDB"],
+      tags: ["React", "Javascript", "Tailwind CSS"],
+      // github: "https://github.com/yourusername/project1",
+      // demo: "https://project1.vercel.app",
     },
     {
       id: 3,
-      title: "Content Generator",
-      desc: "Built and deployed end-to-end projects demonstrating strong problem-solving skills",
+      title: "Personal Portfolio Website",
+      desc: "Designed and developed a responsive personal portfolio website to showcase projects, technical skills, certifications, and achievements. Implemented modern UI/UX principles, smooth animations, and dark/light mode support to enhance user engagement and accessibility.",
       image: project3,
-      tags: ["React", "Node.js", "MongoDB"],
+      tags: ["React", "JavScript", "Tailwind CSS", "Framer-motion"],
+      // github: "https://github.com/yourusername/project1",
+      // demo: "https://project1.vercel.app",
     },
     {
       id: 4,
-      title: "Dashboard",
-      desc: "Built and deployed end-to-end projects demonstrating strong problem-solving skills",
+      title: "Self Driving Vehicle",
+      desc: "Designed and developed an autonomous robotic vehicle capable of detecting and avoiding obstacles using ultrasonic and IR sensors. Implemented real-time navigation logic on Arduino and integrated motor control mechanisms to enable autonomous movement in dynamic environments.",
       image: project4,
       tags: ["React", "Node.js", "MongoDB"],
+      // github: "https://github.com/yourusername/project1",
+      // demo: "https://project1.vercel.app",
     },
-    {
-      id: 5,
-      title: "Task Manager",
-      desc: "Built and deployed end-to-end projects demonstrating strong problem-solving skills",
-      image: project5,
-      tags: ["React", "Node.js", "MongoDB"],
-    },
-    {
-      id: 6,
-      title: "To-Do Application",
-      desc: "Built and deployed end-to-end projects demonstrating strong problem-solving skills",
-      image: project6,
-      tags: ["React", "Node.js", "MongoDB"],
-    },
+    // {
+    //   id: 5,
+    //   title: "Weather App",
+    //   desc: "Built and deployed end-to-end projects demonstrating strong problem-solving skills",
+    //   image: project5,
+    //   tags: ["React", "Javascript", "Tailwind CSS"],
+    //   github: "https://github.com/yourusername/project1",
+    //   demo: "https://project1.vercel.app",
+    // },
+    // {
+    //   id: 6,
+    //   title: "To-Do Application",
+    //   desc: "Built and deployed end-to-end projects demonstrating strong problem-solving skills",
+    //   image: project6,
+    //   tags: ["React", "Javascript", "Tailwind CSS"],
+    //   github: "https://github.com/yourusername/project1",
+    //   demo: "https://project1.vercel.app",
+    // },
   ];
 
   return (
@@ -151,7 +163,9 @@ const Projects = ({ darkMode }) => {
                 </div>
                 <div className="flex gap-2">
                   <a
-                    href="#"
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
                       backgroundColor: darkMode ? "#374151" : "#f3f4f6",
                       color: darkMode ? "white" : "#374151",
@@ -166,8 +180,29 @@ const Projects = ({ darkMode }) => {
                     <span>View Code</span>
                   </a>
                   {/*Demo */}
-                  <a
-                    href="#"
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        background:
+                          "linear-gradient(to right, #f97316, #f59e0b)",
+                      }}
+                      className="flex-1 flex items-center justify-center
+    gap-1.5 px-3 py-2 text-white text-sm rounded-lg
+    hover:shadow-lg hover:shadow-orange-500/25 transition-all"
+                      data-aos="zoom-in"
+                      data-aos-delay="400"
+                    >
+                      <FaExternalLinkAlt className="text-sm" />
+                      <span>Demo</span>
+                    </a>
+                  )}
+                  {/* <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
                       background: "linear-gradient(to right, #f97316, #f59e0b)",
                     }}
@@ -179,7 +214,7 @@ const Projects = ({ darkMode }) => {
                   >
                     <FaExternalLinkAlt className="text-sm" />
                     <span>Demo</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
@@ -187,7 +222,9 @@ const Projects = ({ darkMode }) => {
         </div>
         <div className="text-center mt-10">
           <a
-            href="#"
+            href="https://github.com/rohit-pandey45"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               background: "linear-gradient(to right, #f97316, #f59e0b)",
             }}
@@ -201,7 +238,6 @@ const Projects = ({ darkMode }) => {
             <FaGithub />
             <span>View All Projects</span>
             <FaExternalLinkAlt className="text-sm" />
-            
           </a>
         </div>
       </div>

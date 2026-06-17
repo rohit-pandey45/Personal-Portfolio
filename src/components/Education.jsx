@@ -1,7 +1,14 @@
-import React from 'react';
-import { GraduationCap, BookOpen, School, Award, TrendingUp, Calendar } from 'lucide-react';
+import React from "react";
+import {
+  GraduationCap,
+  BookOpen,
+  School,
+  Award,
+  TrendingUp,
+  Calendar,
+} from "lucide-react";
 
-const Education = () => {
+const Education = ({ darkMode }) => {
   const educationData = [
     {
       institution: "National Institute of Technology Durgapur",
@@ -10,7 +17,7 @@ const Education = () => {
       subScore: "Current CGPA",
       duration: "2024 — Present",
       icon: <GraduationCap className="w-6 h-6 text-orange-500" />,
-      performanceIcon: <Award className="w-5 h-5 text-orange-500" />
+      performanceIcon: <Award className="w-5 h-5 text-orange-500" />,
     },
     {
       institution: "Dakshana Foundation",
@@ -19,7 +26,7 @@ const Education = () => {
       subScore: "JEE Mains",
       duration: "2023 — 2024",
       icon: <BookOpen className="w-6 h-6 text-orange-500" />,
-      performanceIcon: <Award className="w-5 h-5 text-orange-500" />
+      performanceIcon: <Award className="w-5 h-5 text-orange-500" />,
     },
     {
       institution: "Green Point Academy",
@@ -28,90 +35,129 @@ const Education = () => {
       subScore: "Academic Performance",
       duration: "2021 — 2023",
       icon: <School className="w-6 h-6 text-orange-500" />,
-      performanceIcon: <TrendingUp className="w-5 h-5 text-orange-500" />
-    }
+      performanceIcon: <TrendingUp className="w-5 h-5 text-orange-500" />,
+    },
   ];
 
   return (
-    <section 
-      id="education" 
-      className="py-20 w-full relative z-10 clear-both block bg-transparent transition-colors duration-300"
+    <section
+      id="education"
+      className="py-20 px-4 sm:px-6 lg:px-8"
+      style={{
+        backgroundColor: darkMode ? "#111827" : "#f9fafb",
+      }}
     >
-      {/* Expanded max-w to 6xl or 7xl to utilize full screen width */}
-      <div className="container mx-auto px-4 max-w-6xl">
-        
-        {/* Section Heading with Accent Bar */}
-        <div className="border-b border-gray-200 dark:border-gray-800 pb-4 mb-10 relative">
-          <h2 className="text-3xl font-bold tracking-wide uppercase text-black dark:text-white">
-            Education
+      <div className="max-w-6xl mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-16" data-aos="fade-up">
+          <h2
+            className="text-3xl sm:text-4xl font-bold mb-4"
+            style={{
+              color: darkMode ? "white" : "#1f2937",
+            }}
+          >
+            My{" "}
+            <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
+              Education
+            </span>
           </h2>
-          <div className="absolute bottom-0 left-0 w-16 h-[3px] bg-orange-500"></div>
+
+          <p
+            className="max-w-2xl mx-auto text-lg"
+            style={{
+              color: darkMode ? "#d1d5db" : "#4b5563",
+            }}
+          >
+            My academic journey reflects a strong foundation in engineering,
+            analytical thinking, and continuous learning.
+          </p>
         </div>
 
-        {/* Education Boxes Layout */}
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-          {educationData.map((item, index) => (
-            <div 
-              key={index} 
-              className="relative bg-white/5 backdrop-blur-xl rounded-2xl p-7 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.35)] hover:border-orange-500/40 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between min-h-[450px] overflow-hidden group"
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical Line */}
+          <div
+            className="absolute left-5 top-0 bottom-0 w-1 rounded-full"
+            style={{
+              background:
+                "linear-gradient(to bottom, #f97316, #f59e0b)",
+            }}
+          ></div>
+
+          {educationData.map((edu, index) => (
+            <div
+              key={index}
+              className="relative pl-16 mb-12"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
-              {/* <div className="absolute inset-0 -z-10 bg-blue-500/10 blur-3xl"></div>
-              <div className="absolute top-0 right-0 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl"></div> */}
-              {/* Bottom Orange Border Accent */}
-              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange-500 to-amber-500 transform scale-x-100 group-hover:scale-x-105 transition-transform duration-300"></div>
-
-              <div>
-                {/* Header Row: Timeline Tag & Corner Icon */}
-                <div className="flex justify-between items-center mb-6">
-                  <div className="flex items-center gap-1.5 text-xs font-semibold bg-orange-50 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 px-3 py-1.5 rounded-full border border-orange-200/50 dark:border-orange-500/20">
-                    <Calendar className="w-3.5 h-3.5" />
-                    {item.duration}
-                  </div>
-                  <div className="p-2.5 rounded-full bg-orange-500/5 dark:bg-orange-500/10 border border-orange-500/20 shadow-inner">
-                    {item.icon}
-                  </div>
-                </div>
-
-                {/* Institution Title */}
-                <h3 className="text-xl font-bold text-gray-950 dark:text-white leading-snug tracking-tight mb-4">
-                  {item.institution}
-                </h3>
-
-                {/* Degree / Stream with stylized bullet point */}
-                <div className="flex items-start gap-2.5 mt-3">
-                  <span className="w-2 h-2 rounded-full border-2 border-orange-500 bg-transparent mt-1.5 shrink-0"></span>
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400 leading-relaxed">
-                    {item.degree}
-                  </p>
+              {/* Timeline Dot */}
+              <div className="absolute left-0 top-4">
+                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-lg border-2 border-orange-500">
+                  {edu.icon}
                 </div>
               </div>
 
-              {/* Performance Metrics Section */}
-              <div className="mt-8">
-                <p className="text-xs font-semibold tracking-widest uppercase text-gray-400 dark:text-gray-500 mb-2.5">
-                  Performance
-                </p>
-                
-                {/* Score Showcase Box - Using a distinctly darker slate color to contrast inside the card */}
-                <div className="flex items-center gap-4 bg-gray-50 dark:bg-[#090f1e] p-4 rounded-xl border border-gray-100 dark:border-gray-800/80">
-                  <div className="p-2 rounded-lg bg-orange-500/10 border border-orange-500/20 shrink-0">
-                    {item.performanceIcon}
-                  </div>
+              {/* Card */}
+              <div
+                className={`rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/50 ${
+                  darkMode
+                    ? "bg-gray-800 border-gray-700"
+                    : "bg-white border-gray-200"
+                }`}
+              >
+                {/* Header */}
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-5">
                   <div>
-                    <p className="text-base font-bold text-orange-500 dark:text-orange-400">
-                      {item.score}
-                    </p>
-                    <p className="text-xs font-medium text-gray-400 dark:text-gray-500 mt-0.5">
-                      {item.subScore}
+                    <h3 className="text-2xl font-bold text-orange-500">
+                      {edu.institution}
+                    </h3>
+
+                    <p
+                      className="mt-1 text-lg"
+                      style={{
+                        color: darkMode ? "#d1d5db" : "#4b5563",
+                      }}
+                    >
+                      {edu.degree}
                     </p>
                   </div>
+
+                  <div className="flex items-center gap-2 mt-3 md:mt-0 text-orange-400">
+                    <Calendar size={18} />
+                    <span>{edu.duration}</span>
+                  </div>
+                </div>
+
+                {/* Score Card */}
+                <div
+                  className={`p-4 rounded-xl border flex items-center justify-between ${
+                    darkMode
+                      ? "bg-gray-900 border-gray-700"
+                      : "bg-orange-50 border-orange-100"
+                  }`}
+                >
+                  <div>
+                    <h4 className="text-xl font-bold text-orange-500">
+                      {edu.score}
+                    </h4>
+
+                    <p
+                      className="text-sm"
+                      style={{
+                        color: darkMode ? "#9ca3af" : "#6b7280",
+                      }}
+                    >
+                      {edu.subScore}
+                    </p>
+                  </div>
+
+                  {edu.performanceIcon}
                 </div>
               </div>
-
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

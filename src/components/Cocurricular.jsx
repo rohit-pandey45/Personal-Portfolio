@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
+import { Users, Calendar, Trophy } from "lucide-react";
 
-const Cocurricular = () => {
+const Cocurricular = ({ darkMode }) => {
   const activityData = [
     {
       title: "Department Representative",
-      subtitle: "EE Department NIT Durgapur",
+      subtitle: "EE Department, NIT Durgapur",
       dateRange: "Aug 2025 — Present",
       points: [
         "Coordinated communication between students and faculty while representing batch concerns and activities.",
@@ -13,10 +14,10 @@ const Cocurricular = () => {
     },
     {
       title: "Senior Coordinator",
-      subtitle: "Bihari More Education Project, NITDGP",
+      subtitle: "Bihari More Education Project, NIT Durgapur",
       dateRange: "Jan 2025 — Present",
       points: [
-        "Teaching Volunteer for underprivileged students' JNV exam preparation, enhancing leadership and teaching skills.",
+        "Teaching volunteer for underprivileged students preparing for JNV examinations, strengthening leadership and mentoring skills.",
         "Member of the Graphics Designing Team, contributing to creative designs and visual content development.",
       ],
     },
@@ -25,61 +26,125 @@ const Cocurricular = () => {
       subtitle: "NIT Durgapur Cricket Team",
       dateRange: "2024 — Present",
       points: [
-        "Represented National Institute of Technology Durgapur at the prestigious Inter-NIT Cricket Tournament.",
-        "Engaged in rigorous strategic team planning, physical conditioning, and high-pressure match situations alongside top athletic talent across the NIT circuit.",
-        "Demonstrated strong sportsmanship, team synergy, and peak performance discipline under competitive match environments."
+        "Represented NIT Durgapur at the prestigious Inter-NIT Cricket Tournament.",
+        "Participated in strategic team planning, intensive training sessions, and high-pressure competitive matches.",
+        "Demonstrated teamwork, discipline, leadership, and sportsmanship in a national-level sporting environment.",
       ],
     },
   ];
 
   return (
-    <section 
-      id="curricular" 
-      className="py-20 scroll-mt-20 min-h-[85vh] flex flex-col justify-center bg-transparent text-black dark:text-white"
+    <section
+      id="curricular"
+      className="py-20 px-4 sm:px-6 lg:px-8"
+      style={{
+        backgroundColor: darkMode ? "#111827" : "#f9fafb",
+      }}
     >
-      <div className="container mx-auto px-6 max-w-4xl w-full">
-        
-        {/* Futuristic Section Header */}
-        <div className="flex items-center gap-4 mb-16 group">
-          <div className="h-8 w-[4px] bg-orange-500 rounded-full transition-transform duration-300 group-hover:scale-y-125" />
-          <h2 className="text-3xl font-black tracking-tight uppercase">
-            Co-Curricular Activities <span className="text-orange-500">.</span>
+      <div className="max-w-6xl mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-16" data-aos="fade-up">
+          <h2
+            className="text-3xl sm:text-4xl font-bold mb-4"
+            style={{
+              color: darkMode ? "white" : "#1f2937",
+            }}
+          >
+            Co-Curricular{" "}
+            <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
+              Activities
+            </span>
           </h2>
+
+          <p
+            className="max-w-2xl mx-auto text-lg"
+            style={{
+              color: darkMode ? "#d1d5db" : "#4b5563",
+            }}
+          >
+            Leadership, community service, and sports experiences that have
+            helped shape my teamwork, communication, and organizational skills.
+          </p>
         </div>
 
-        {/* Industrial Border Deck Blocks */}
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical Line */}
+          <div
+            className="absolute left-5 top-0 bottom-0 w-1 rounded-full"
+            style={{
+              background:
+                "linear-gradient(to bottom, #f97316, #f59e0b)",
+            }}
+          ></div>
+
           {activityData.map((activity, index) => (
-            <div 
-              key={index} 
-              className="neo-glow bg-white dark:bg-gray-900/40 border-t-4 border-t-orange-500 border border-gray-200 dark:border-gray-800 rounded-xl p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-1"
+            <div
+              key={index}
+              className="relative pl-16 mb-12"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
-              <div className="flex justify-between items-start gap-4 mb-4">
-                <div>
-                  <h3 className="text-2xl font-black text-gray-950 dark:text-white tracking-tight leading-none">
-                    {activity.title}
-                  </h3>
-                  <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mt-2">
-                    {activity.subtitle}
-                  </p>
+              {/* Timeline Icon */}
+              <div className="absolute left-0 top-4">
+                <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center shadow-lg">
+                  {index === 2 ? (
+                    <Trophy className="w-5 h-5 text-white" />
+                  ) : (
+                    <Users className="w-5 h-5 text-white" />
+                  )}
                 </div>
-                <span className="text-xs font-mono font-bold bg-orange-500/10 text-orange-500 dark:text-orange-400 px-3 py-1 rounded-md border border-orange-500/20 whitespace-nowrap">
-                  {activity.dateRange}
-                </span>
               </div>
-              
-              <ul className="space-y-3 mt-6 border-t border-gray-100 dark:border-gray-800/80 pt-4">
-                {activity.points.map((point, pointIndex) => (
-                  <li key={pointIndex} className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex items-start gap-2">
-                    <span className="text-orange-500 mt-1.5 text-xs">■</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
+
+              {/* Card */}
+              <div
+                className={`rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/50 ${
+                  darkMode
+                    ? "bg-gray-800 border-gray-700"
+                    : "bg-white border-gray-200"
+                }`}
+              >
+                {/* Header */}
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-5">
+                  <div>
+                    <h3 className="text-2xl font-bold text-orange-500">
+                      {activity.title}
+                    </h3>
+
+                    <p
+                      className="mt-1"
+                      style={{
+                        color: darkMode ? "#d1d5db" : "#4b5563",
+                      }}
+                    >
+                      {activity.subtitle}
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-2 mt-3 md:mt-0 text-orange-400">
+                    <Calendar size={18} />
+                    <span>{activity.dateRange}</span>
+                  </div>
+                </div>
+
+                {/* Points */}
+                <ul className="space-y-3">
+                  {activity.points.map((point, i) => (
+                    <li
+                      key={i}
+                      className={`flex items-start gap-3 ${
+                        darkMode ? "text-gray-300" : "text-gray-700"
+                      }`}
+                    >
+                      <span className="text-orange-500 mt-1">●</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
