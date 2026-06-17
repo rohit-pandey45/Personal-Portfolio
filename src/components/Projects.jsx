@@ -16,7 +16,7 @@ const Projects = ({ darkMode }) => {
       desc: "Built an AI-powered job preparation platform featuring interview practice, personalized feedback, and skill-based question generation. Leveraged Generative AI to help users improve interview performance and track their preparation progress.",
       image: project1,
       tags: ["React", "Node.js", "MongoDB", "Gemini API"],
-      // github: "https://github.com/yourusername/project1",
+      //github: "https://github.com/rohit-pandey45/Personal-Portfolio",
       // demo: "https://project1.vercel.app",
     },
     {
@@ -34,7 +34,7 @@ const Projects = ({ darkMode }) => {
       desc: "Designed and developed a responsive personal portfolio website to showcase projects, technical skills, certifications, and achievements. Implemented modern UI/UX principles, smooth animations, and dark/light mode support to enhance user engagement and accessibility.",
       image: project3,
       tags: ["React", "JavScript", "Tailwind CSS", "Framer-motion"],
-      // github: "https://github.com/yourusername/project1",
+      github: "https://github.com/rohit-pandey45/Personal-Portfolio",
       // demo: "https://project1.vercel.app",
     },
     {

@@ -5,7 +5,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import { SiLeetcode, SiGeeksforgeeks, SiCodechef } from "react-icons/si";
-import CV from "../assets/resume.pdf";
+import CV from "../assets/CV.pdf";
 import hero from "../assets/rohitt.jpg";
 import { DownloadIcon, Mail } from "lucide-react";
 import hi from "../assets/hi.png";
@@ -120,10 +120,7 @@ const Hero = ({ darkMode }) => {
               data-aos="fade-up"
               data-aos-delay="600"
             >
-              Electrical Engineering undergraduate passionate about Full Stack
-              Development, Data Structures & Algorithms, and Embedded Systems. I
-              enjoy building scalable web applications and solving real-world
-              problems through technology.
+              Electrical Engineering undergraduate at NIT Durgapur passionate about Software Development, Full Stack Web Development, and Data Structures & Algorithms. Experienced in building modern web applications and AI-powered projects while strengthening problem-solving, teamwork, and leadership skills through technical and co-curricular activities.
             </p>
             {/*Buttons */}
             <div className="w-full pt-4 sm:pt-6">
@@ -159,7 +156,7 @@ const Hero = ({ darkMode }) => {
             data-aos-delay="800"
           >
             <div>
-              <h3 className="text-2xl font-bold text-orange-500">300+</h3>
+              <h3 className="text-2xl font-bold text-orange-500">400+</h3>
               <p className={theme.textSecondary}>DSA Problems</p>
             </div>
 
@@ -169,8 +166,8 @@ const Hero = ({ darkMode }) => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-orange-500">5+</h3>
-              <p className={theme.textSecondary}>Technologies</p>
+              <h3 className="text-2xl font-bold text-orange-500">2⭐️</h3>
+              <p className={theme.textSecondary}>Codechef Rating</p>
             </div>
           </div>
           {/*Image */}
