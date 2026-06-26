@@ -3,7 +3,7 @@ import { FiExternalLink } from 'react-icons/fi';
 import AWS from '../assets/AWS.png'
 import sql from "../assets/SQL_Database.png";
 import prompt from '../assets/Prompt.png'
-import sky from '../assets/Skyscanner.png'
+import sky from '../assets/full.png'
 import cyber from '../assets/cyber.png'
 import github from '../assets/GITHUB.jpg'
 
@@ -37,12 +37,12 @@ const Certifications = () => {
       credentialUrl: "https://drive.google.com/file/d/1HukP5F3qdc5TLfh6gBJqsJ7zOxxSySfD/view?usp=drive_link" // Replace with your link
     },
     {
-      title: "Skyscanner - Front-End Software Engineering Job Simulation",
-      issuer: "Forage",
-      description: "Developed and enhanced front-end features by applying modern web development practices, focusing on user experience, component design, and responsive interfaces.",
-      tags: ["Backpack", "Javascript", "React Development"],
+      title: "Full Stack Web Developer",
+      issuer: "Simplilearn",
+      description: "Developed and enhanced full stack features by applying modern web development practices, focusing on user experience, component design, and responsive interfaces.",
+      tags: ["Frontend", "Backend", "Database"],
       image: sky,
-      credentialUrl: "https://www.theforage.com/completion-certificates/skoQmxqhtgWmKv2pm/km4rw7dihDr3etqom_skoQmxqhtgWmKv2pm_uLtkQSZM88LdYo2Lk_1779998439970_completion_certificate.pdf" // Replace with your link
+      credentialUrl: "https://certificates.simplicdn.net/share/10388569_10701506_1782309877734.pdf" // Replace with your link
     },
     {
       title: "Deloitte Australia - Cyber Job Simulation",

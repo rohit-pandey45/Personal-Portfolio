@@ -1,12 +1,27 @@
 import React from "react";
-import { Briefcase, Calendar } from "lucide-react";
+import { Briefcase, Calendar, ExternalLink } from "lucide-react";
 
 const Experience = ({ darkMode }) => {
   const experienceData = [
     {
-      title: "Software Engineering Virtual Experience",
-      subtitle: "Skyscanner (via Forage)",
+      title: "Software Engineering Virtual Job Simulation",
+      subtitle: "JPMorgan Chase & Co (via Forage)",
       dateRange: "2026",
+      certificateUrl:
+        "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_uLtkQSZM88LdYo2Lk_1782299405582_completion_certificate.pdf", // Add your link here
+      points: [
+        "Engineered enterprise microservices within a simulated JPMorgan Chase environment using Java, Spring Boot, and Maven to handle high-profile financial operations.",
+        "Integrated Apache Kafka messaging infrastructure into a Spring application to establish secure, high-speed asynchronous data streams for transaction processing.",
+        "Configured and integrated an embedded H2 database with Spring Data JPA to ensure robust data persistence, validation, and local state management.",
+        "Designed and deployed scalable RESTful web services to securely expose internal business logic and seamlessly consume external third-party vendor APIs.",
+      ],
+    },
+    {
+      title: "Software Engineering Virtual Experience",
+      subtitle: "SkyScanner (via Forage)",
+      dateRange: "2026",
+      certificateUrl:
+        "https://www.theforage.com/completion-certificates/skoQmxqhtgWmKv2pm/km4rw7dihDr3etqom_skoQmxqhtgWmKv2pm_uLtkQSZM88LdYo2Lk_1779998439970_completion_certificate.pdf",
       points: [
         "Utilized Skyscanner's Backpack React library to build responsive web application layouts following production-grade design system standards.",
         "Developed a Java-based Dropwizard microservice to handle HTTP search requests and enable efficient filtering of travel-related data.",
@@ -45,8 +60,8 @@ const Experience = ({ darkMode }) => {
               color: darkMode ? "#d1d5db" : "#4b5563",
             }}
           >
-            Practical learning experiences that helped me strengthen my
-            software development, problem-solving, and system design skills.
+            Practical learning experiences that helped me strengthen my software
+            development, problem-solving, and system design skills.
           </p>
         </div>
 
@@ -56,8 +71,7 @@ const Experience = ({ darkMode }) => {
           <div
             className="absolute left-5 top-0 bottom-0 w-1 rounded-full"
             style={{
-              background:
-                "linear-gradient(to bottom, #f97316, #f59e0b)",
+              background: "linear-gradient(to bottom, #f97316, #f59e0b)",
             }}
           ></div>
 
@@ -83,7 +97,7 @@ const Experience = ({ darkMode }) => {
                     : "bg-white border-gray-200"
                 }`}
               >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
                   <div>
                     <h3 className="text-2xl font-bold text-orange-500">
                       {exp.title}
@@ -99,9 +113,27 @@ const Experience = ({ darkMode }) => {
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-2 mt-3 md:mt-0 text-orange-400">
-                    <Calendar size={18} />
-                    <span>{exp.dateRange}</span>
+                  <div className="flex flex-wrap items-center gap-4 text-orange-400">
+                    <div className="flex items-center gap-2">
+                      <Calendar size={18} />
+                      <span>{exp.dateRange}</span>
+                    </div>
+
+                    {exp.certificateUrl && (
+                      <a
+                        href={exp.certificateUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex items-center gap-1 px-3 py-1.5 rounded-lg border text-sm font-medium transition-colors ${
+                          darkMode
+                            ? "border-orange-500/30 bg-orange-500/10 hover:bg-orange-500/20 text-orange-400"
+                            : "border-orange-500/20 bg-orange-50 text-orange-600 hover:bg-orange-100"
+                        }`}
+                      >
+                        View Certificate
+                        <ExternalLink size={14} />
+                      </a>
+                    )}
                   </div>
                 </div>
 

@@ -1,8 +1,8 @@
 import React from "react";
-import project1 from "../assets/project1.png";
-import project2 from "../assets/project2.png";
-import project3 from "../assets/project3.png";
-import project4 from "../assets/project4.png";
+import project1 from "../assets/project11.png";
+import project2 from "../assets/project22.png";
+import project3 from "../assets/project33.png";
+import project4 from "../assets/project44.jpg";
 import project5 from "../assets/project5.png";
 import project6 from "../assets/project6.png";
 import { div, section } from "framer-motion/client";
@@ -16,7 +16,7 @@ const Projects = ({ darkMode }) => {
       desc: "Built an AI-powered job preparation platform featuring interview practice, personalized feedback, and skill-based question generation. Leveraged Generative AI to help users improve interview performance and track their preparation progress.",
       image: project1,
       tags: ["React", "Node.js", "MongoDB", "Gemini API"],
-      //github: "https://github.com/rohit-pandey45/Personal-Portfolio",
+      github: "https://github.com/rohit-pandey45/Full-Stack-Gen-AI-Job-Preparation-Web-Application",
       // demo: "https://project1.vercel.app",
     },
     {
@@ -25,7 +25,7 @@ const Projects = ({ darkMode }) => {
       desc: "Building an AI-driven resume screening application that analyzes resumes, matches them with job descriptions, and generates actionable feedback. Designed to help candidates improve ATS compatibility and strengthen their job application profiles.",
       image: project2,
       tags: ["React", "Javascript", "Tailwind CSS"],
-      // github: "https://github.com/yourusername/project1",
+      github: "https://github.com/rohit-pandey45/Full-Stack-Gen-AI-Job-Preparation-Web-Application",
       // demo: "https://project1.vercel.app",
     },
     {
