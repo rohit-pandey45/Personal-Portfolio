@@ -6,19 +6,17 @@ import prompt from '../assets/Prompt.png'
 import sky from '../assets/full.png'
 import cyber from '../assets/cyber.png'
 import github from '../assets/GITHUB.jpg'
-
+import ai from '../assets/Gen_AI.png'
 
 const Certifications = () => {
-  // Add your certificate details here. 
-  // Replace the placeholder image paths with your actual asset routes (e.g., "/assets/aws.png")
   const certificationsData = [
     {
-      title: "AWS APAC - Solutions Architecture Job Simulation",
-      issuer: "Forage Certification",
-      description: "Designed scalable and secure cloud-based solutions while applying core AWS architecture principles to real-world business scenarios.",
-      tags: ["AWS Cloud", "Cloud Security", "Solution Architecture"],
-      image: AWS, // Replace with your image path
-      credentialUrl: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_uLtkQSZM88LdYo2Lk_1750782982508_completion_certificate.pdf" // Replace with your link
+      title: "Introduction to Generative AI",
+      issuer: "Google Cloud",
+      description: "Learned the Fundamentals of Generative AI",
+      tags: ["Gen AI", "Google Cloud"],
+      image: ai, 
+      credentialUrl: "https://certificates.simplicdn.net/share/10396723_10701506_1782480056144.pdf" 
     },
     {
       title: "SQL and Relational Databases 101",
@@ -26,7 +24,7 @@ const Certifications = () => {
       description: "Learned the fundamentals of relational database design, SQL queries, and data management techniques.",
       tags: ["SQL", "Database Design", "Data Querying"],
       image: sql,
-      credentialUrl: "https://courses.cognitiveclass.ai/certificates/631b8c8e559740abb235508104af91c5" // Replace with your link
+      credentialUrl: "https://courses.cognitiveclass.ai/certificates/631b8c8e559740abb235508104af91c5" 
     },
     {
       title: "Foundations of Prompt Engineering",
@@ -34,7 +32,7 @@ const Certifications = () => {
       description: "Explored prompt engineering techniques to optimize interactions with generative AI models for accurate and efficient outputs.",
       tags: ["AI Optimization", "Prompt Engineering"],
       image: prompt,
-      credentialUrl: "https://drive.google.com/file/d/1HukP5F3qdc5TLfh6gBJqsJ7zOxxSySfD/view?usp=drive_link" // Replace with your link
+      credentialUrl: "https://drive.google.com/file/d/1HukP5F3qdc5TLfh6gBJqsJ7zOxxSySfD/view?usp=drive_link" 
     },
     {
       title: "Full Stack Web Developer",
@@ -42,7 +40,7 @@ const Certifications = () => {
       description: "Developed and enhanced full stack features by applying modern web development practices, focusing on user experience, component design, and responsive interfaces.",
       tags: ["Frontend", "Backend", "Database"],
       image: sky,
-      credentialUrl: "https://certificates.simplicdn.net/share/10388569_10701506_1782309877734.pdf" // Replace with your link
+      credentialUrl: "https://certificates.simplicdn.net/share/10388569_10701506_1782309877734.pdf" 
     },
     {
       title: "Deloitte Australia - Cyber Job Simulation",
@@ -50,7 +48,15 @@ const Certifications = () => {
       description: "Completed practical cybersecurity tasks involving threat detection, risk assessment, and security incident investigation within a simulated enterprise environment..",
       tags: ["Cyber Security", "Risk Assessment", "Threat Analysis"],
       image: cyber,
-      credentialUrl: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_uLtkQSZM88LdYo2Lk_1750788833141_completion_certificate.pdf" // Replace with your link
+      credentialUrl: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_uLtkQSZM88LdYo2Lk_1750788833141_completion_certificate.pdf"
+    },
+    {
+      title: "AWS APAC - Solutions Architecture Job Simulation",
+      issuer: "Forage Certification",
+      description: "Designed scalable and secure cloud-based solutions while applying core AWS architecture principles to real-world business scenarios.",
+      tags: ["AWS Cloud", "Cloud Security", "Solution Architecture"],
+      image: AWS, 
+      credentialUrl: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_uLtkQSZM88LdYo2Lk_1750782982508_completion_certificate.pdf" 
     },
     {
       title: "Git & GitHub",
@@ -58,7 +64,7 @@ const Certifications = () => {
       description: "Completed practical cybersecurity tasks involving threat detection, risk assessment, and security incident investigation within a simulated enterprise environment..",
       tags: ["Cyber Security", "Risk Assessment", "Threat Analysis"],
       image: github,
-      credentialUrl: "https://verify.letsupgrade.in/certificate/LUEGGJUN125297" // Replace with your link
+      credentialUrl: "https://verify.letsupgrade.in/certificate/LUEGGJUN125297" 
     }
   ];
 
