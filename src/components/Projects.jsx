@@ -1,10 +1,8 @@
 import React from "react";
-import project1 from "../assets/project11.png";
-import project2 from "../assets/project22.png";
-import project3 from "../assets/project33.png";
-import project4 from "../assets/project44.jpg";
-import project5 from "../assets/project5.png";
-import project6 from "../assets/project6.png";
+import project1 from "../assets/project1.png";
+import project2 from "../assets/project2.png";
+import project3 from "../assets/project3.png";
+import project4 from "../assets/project4.jpeg";
 import { div, section } from "framer-motion/client";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
@@ -43,27 +41,9 @@ const Projects = ({ darkMode }) => {
       desc: "Designed and developed an autonomous robotic vehicle capable of detecting and avoiding obstacles using ultrasonic and IR sensors. Implemented real-time navigation logic on Arduino and integrated motor control mechanisms to enable autonomous movement in dynamic environments.",
       image: project4,
       tags: ["React", "Node.js", "MongoDB"],
-      // github: "https://github.com/yourusername/project1",
+      certificate: "https://drive.google.com/drive/folders/1rEepsbYgOUsgeITILUEsN7gZOY2pZ7sb",
       // demo: "https://project1.vercel.app",
     },
-    // {
-    //   id: 5,
-    //   title: "Weather App",
-    //   desc: "Built and deployed end-to-end projects demonstrating strong problem-solving skills",
-    //   image: project5,
-    //   tags: ["React", "Javascript", "Tailwind CSS"],
-    //   github: "https://github.com/yourusername/project1",
-    //   demo: "https://project1.vercel.app",
-    // },
-    // {
-    //   id: 6,
-    //   title: "To-Do Application",
-    //   desc: "Built and deployed end-to-end projects demonstrating strong problem-solving skills",
-    //   image: project6,
-    //   tags: ["React", "Javascript", "Tailwind CSS"],
-    //   github: "https://github.com/yourusername/project1",
-    //   demo: "https://project1.vercel.app",
-    // },
   ];
 
   return (
