@@ -31,7 +31,7 @@ const Projects = ({ darkMode }) => {
       image: project3,
       tags: ["React", "JavaScript", "Tailwind CSS", "Framer-motion"],
       github: "https://github.com/rohit-pandey45/Personal-Portfolio",
-      demo: "https://your-portfolio.vercel.app",
+      demo: "https://the-rohitportfolio.vercel.app/",
     },
     {
       id: 3,
@@ -48,7 +48,7 @@ const Projects = ({ darkMode }) => {
     <section
       id="projects"
       style={{ backgroundColor: darkMode ? "#111827" : "#f9fafb" }}
-      className="relative py-24"
+      className="relative pt-10 pb-24"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-10" data-aos="fade-up">
@@ -90,7 +90,7 @@ const Projects = ({ darkMode }) => {
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <div className="h-42 overflow-hidden rounded-t-2xl">
+              <div className="h-48 overflow-hidden rounded-t-2xl">
                 <img
                   src={project.image}
                   alt={project.title}

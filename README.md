@@ -2,7 +2,7 @@
 
 A responsive personal portfolio website built to showcase my skills, projects, certifications, and journey as a Full Stack Developer. Designed with a modern dark/light theme, smooth animations, and a clean developer-focused layout.
 
-🌐 **Live Demo:** [your-portfolio.vercel.app](https://your-portfolio.vercel.app)
+🌐 **Live Demo:** [your-portfolio.vercel.app](https://the-rohitportfolio.vercel.app/)
 
 ---
 
