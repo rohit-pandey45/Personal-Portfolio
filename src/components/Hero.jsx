@@ -95,32 +95,36 @@ const Hero = ({ darkMode }) => {
                 );
               })}
             </div>
-            {/* <div
-              className="inline-block mb-4 px-4 py-2 rounded-full bg-green-500/20 text-green-400 text-sm font-medium"
+            <div
+              className="inline-block mb-4 px-4 py-2 rounded-full bg-orange-500/20 text-orange-400 text-sm font-medium"
               data-aos="fade-up"
               data-aos-delay="450"
             >
               Available for Internships
-            </div> */}
+            </div>
             <h1
               className={`title-font text-3xl sm:text-4xl lg:text-5xl mb-4 font-bold ${theme.textPrimary}`}
               data-aos="fade-up"
               data-aos-delay="500"
             >
               Hi! I'm Rohit
-              
             </h1>
             <h2 className="text-xl sm:text-2xl font-semibold text-orange-500 mb-4">
-                Electrical Engineering Student | Full Stack Developer | DSA
-                Enthusiast
-              </h2>
+              Electrical Engineering Student | Full Stack Developer | DSA
+              Enthusiast
+            </h2>
             <p
               className={`mb-6 sm:mb-8 leading-relaxed max-w-md 
               sm:max-w-lg ${theme.textSecondary}`}
               data-aos="fade-up"
               data-aos-delay="600"
             >
-              Electrical Engineering undergraduate at NIT Durgapur passionate about Software Development, Full Stack Web Development, and Data Structures & Algorithms. Experienced in building modern web applications and AI-powered projects while strengthening problem-solving, teamwork, and leadership skills through technical and co-curricular activities.
+              Electrical Engineering undergraduate at NIT Durgapur passionate
+              about Software Development, Full Stack Web Development, and Data
+              Structures & Algorithms. Experienced in building modern web
+              applications and AI-powered projects while strengthening
+              problem-solving, teamwork, and leadership skills through technical
+              and co-curricular activities.
             </p>
             {/*Buttons */}
             <div className="w-full pt-4 sm:pt-6">
@@ -156,17 +160,17 @@ const Hero = ({ darkMode }) => {
             data-aos-delay="800"
           >
             <div>
-              <h3 className="text-2xl font-bold text-orange-500">400+</h3>
+              <h3 className="text-2xl font-bold text-orange-500">500+</h3>
               <p className={theme.textSecondary}>DSA Problems</p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-orange-500">5+</h3>
-              <p className={theme.textSecondary}>Projects</p>
+              <h3 className="text-2xl font-bold text-orange-500">3+</h3>
+              <p className={theme.textSecondary}>Full Stack Projects</p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-orange-500">2⭐️</h3>
+              <h3 className="text-2xl font-bold text-orange-500">3⭐️</h3>
               <p className={theme.textSecondary}>Codechef Rating</p>
             </div>
           </div>

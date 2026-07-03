@@ -56,7 +56,7 @@ const Skills = ({ darkMode }) => {
     {
       title: "Tools & Version Control",
       icon: <FaGitAlt />,
-      skills: ["Git", "GitHub"],
+      skills: ["Git", "GitHub", "VS Code", "Postman", "npm"],
     },
   ];
 
@@ -165,9 +165,9 @@ const Skills = ({ darkMode }) => {
       style={{
         backgroundColor: darkMode ? "#111827" : "#f9fafb",
       }}
-      className="py-20 relative overflow-hidden"
+      className="py-8 relative overflow-hidden"
     >
-      <div className="py-14 relative overflow-hidden">
+      <div className="py-6 relative overflow-hidden">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-20" data-aos="fade-up">
             <h1
@@ -194,14 +194,15 @@ const Skills = ({ darkMode }) => {
                 color: darkMode ? "#d1d5db" : "#4b5563",
               }}
             >
-              I have experience working with a range of technologies across web
-              development and programming. My focus is on building responsive
-              applications, writing efficient code, and continuously expanding
-              my technical skill set.
+              Proficient in frontend technologies including HTML5, CSS3,
+              JavaScript, React.js, Next.js, Tailwind CSS, and Redux. On the
+              backend, I work with Node.js, Express.js, MongoDB, and MySQL. I
+              have a strong foundation in C, C++, DSA, and OOP, and I use Git
+              and GitHub for version control and collaboration.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-16">
+          {/* <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-16">
             {skillCategories.map((category, index) => (
               <div
                 key={index}
@@ -233,7 +234,51 @@ const Skills = ({ darkMode }) => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-16">
+            {skillCategories.map((category, index) => (
+              <div
+                key={index}
+                className={`p-5 rounded-xl border flex flex-col justify-between
+      hover:-translate-y-1 transition-all duration-300
+      ${
+        darkMode
+          ? "bg-gray-800 border-gray-700 hover:border-orange-500/50"
+          : "bg-white border-gray-200 hover:border-orange-400"
+      }`}
+                style={{
+                  borderTop: "3px solid #f97316",
+                }}
+              >
+                <div>
+                  <div className="flex items-center gap-3 mb-4 min-h-[56px]">
+                    <span className="text-2xl text-orange-500">
+                      {category.icon}
+                    </span>
+                    <h3 className="text-lg font-bold text-orange-500">
+                      {category.title}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill, i) => (
+                      <span
+                        key={i}
+                        className={`text-xs font-medium px-3 py-1.5 rounded-full
+  transition-colors border
+  ${
+    darkMode
+      ? "bg-gray-700/60 text-gray-300 border-gray-600/40 hover:bg-gray-700"
+      : "bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200"
+  }`}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
           <div
             className="flex flex-wrap -m-4"
             data-aos="fade-up"
@@ -350,25 +395,3 @@ const Skills = ({ darkMode }) => {
 };
 
 export default Skills;
-
-
-
-
-{/* <h3 className="text-lg font-bold text-orange-500 mb-4 min-h-[56px] flex items-center">
-                  {category.title}
-                </h3> */}
-                {/* <ul className="space-y-1">
-                  {category.skills.map((skill, i) => (
-                    <li
-                      key={i}
-                      className={`${
-                        darkMode ? "text-gray-300" : "text-gray-700"
-                      }`}
-                    >
-                      • {skill}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div> */}

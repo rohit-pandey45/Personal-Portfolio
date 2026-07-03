@@ -65,14 +65,17 @@ const About = ({ darkMode }) => {
             data-aos-delay="500"
           >
             I'm Rohit Pandey, an Electrical Engineering undergraduate with a
-            strong focus on Data Structures & Algorithms and Full Stack Web
-            Development. I actively solve coding problems to strengthen my
-            problem-solving and analytical thinking. I enjoy building efficient
-            and optimized solutions through consistent practice and learning. I
-            develop responsive and scalable web applications using modern
-            technologies like React and JavaScript. I am actively seeking
-            opportunities to apply my skills in real-world projects and grow as
-            a software developer in a professional environment.
+            strong interest in Full Stack Web Development and Data Structures &
+            Algorithms. I build responsive and scalable web applications using
+            React, Node.js, and MongoDB, and I regularly practice DSA to
+            strengthen my problem-solving and analytical thinking. I enjoy
+            working on real-world projects that challenge me to write clean,
+            efficient code and learn new technologies along the way. I have
+            hands-on experience building production-ready applications with AI
+            integration, Google OAuth, and cloud deployments. I am actively
+            seeking internship opportunities where I can apply my skills,
+            contribute meaningfully, and grow as a software developer in a
+            professional environment.
           </p>
           <div
             className="flex flex-wrap justify-center lg:justify-start gap-4
@@ -87,13 +90,13 @@ const About = ({ darkMode }) => {
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold
                 text-orange-400"
               >
-                3+
+                2+
               </div>
               <div
                 className={`text-xs sm:text-sm lg:text-base
                     ${darkMode ? "text-gray-300" : "text-gray-600"}`}
               >
-                Education
+              Years Learning
               </div>
             </div>
 
@@ -106,13 +109,13 @@ const About = ({ darkMode }) => {
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold
                 text-orange-400"
               >
-                0+
+                7+
               </div>
               <div
                 className={`text-xs sm:text-sm lg:text-base
                     ${darkMode ? "text-gray-300" : "text-gray-600"}`}
               >
-                Years Experience
+                Projects Built
               </div>
             </div>
 
@@ -125,13 +128,13 @@ const About = ({ darkMode }) => {
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold
                 text-orange-400"
               >
-                4+
+                10+
               </div>
               <div
                 className={`text-xs sm:text-sm lg:text-base
                     ${darkMode ? "text-gray-300" : "text-gray-600"}`}
               >
-                Projects Completed
+                Technologies
               </div>
             </div>
           </div>

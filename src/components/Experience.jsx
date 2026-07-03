@@ -4,9 +4,22 @@ import { Briefcase, Calendar, ExternalLink } from "lucide-react";
 const Experience = ({ darkMode }) => {
   const experienceData = [
     {
+      title: "Web Development Intern",
+      subtitle: "Axlero Innovative Solutions",
+      dateRange: "July 2026 - Present",
+      certificateUrl:
+        "https://drive.google.com/file/d/1--CxRI9rJiro61lSQPCuxlzmVNM49c0y/view?usp=sharing", // Add your link here
+      points: [
+        "Frontend Development: Develop user interfaces using HTML, CSS, JavaScript, React.js, and Next.js, ensuring cross-browser compatibility, high speed, and optimal responsiveness.",
+        "API & Backend Integration: Collaborate closely with backend developers to integrate APIs, implement server-side functionality, and support database optimization tasks.",
+        "Agile Collaboration: Participate actively in software development workflows, including daily standups, sprint planning, module code reviews, and technical discussions.",
+        "Quality & Maintenance: Debug and troubleshoot cross-application technical issues while documenting features and maintaining strict coding and security standards.",
+      ],
+    },
+    {
       title: "Software Engineering Virtual Job Simulation",
       subtitle: "JPMorgan Chase & Co (via Forage)",
-      dateRange: "2026",
+      dateRange: "June 2026",
       certificateUrl:
         "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_uLtkQSZM88LdYo2Lk_1782299405582_completion_certificate.pdf", // Add your link here
       points: [
@@ -19,7 +32,7 @@ const Experience = ({ darkMode }) => {
     {
       title: "Software Engineering Virtual Experience",
       subtitle: "SkyScanner (via Forage)",
-      dateRange: "2026",
+      dateRange: "May 2026",
       certificateUrl:
         "https://www.theforage.com/completion-certificates/skoQmxqhtgWmKv2pm/km4rw7dihDr3etqom_skoQmxqhtgWmKv2pm_uLtkQSZM88LdYo2Lk_1779998439970_completion_certificate.pdf",
       points: [
