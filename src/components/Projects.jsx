@@ -90,7 +90,7 @@ const Projects = ({ darkMode }) => {
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <div className="h-40 overflow-hidden rounded-t-2xl">
+              <div className="h-42 overflow-hidden rounded-t-2xl">
                 <img
                   src={project.image}
                   alt={project.title}

@@ -1,7 +1,3 @@
-// import instagram from "../assets/instagram.png";
-// import tiktok from "../assets/tiktok.png";
-// import github from "../assets/github.png";
-// import youtube from "../assets/youtube.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import { SiLeetcode, SiGeeksforgeeks, SiCodechef } from "react-icons/si";

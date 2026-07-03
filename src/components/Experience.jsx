@@ -8,7 +8,7 @@ const Experience = ({ darkMode }) => {
       subtitle: "Axlero Innovative Solutions",
       dateRange: "July 2026 - Present",
       certificateUrl:
-        "https://drive.google.com/file/d/1--CxRI9rJiro61lSQPCuxlzmVNM49c0y/view?usp=sharing", // Add your link here
+        "https://drive.google.com/file/d/1--CxRI9rJiro61lSQPCuxlzmVNM49c0y/view?usp=sharing", 
       points: [
         "Frontend Development: Develop user interfaces using HTML, CSS, JavaScript, React.js, and Next.js, ensuring cross-browser compatibility, high speed, and optimal responsiveness.",
         "API & Backend Integration: Collaborate closely with backend developers to integrate APIs, implement server-side functionality, and support database optimization tasks.",
@@ -21,7 +21,7 @@ const Experience = ({ darkMode }) => {
       subtitle: "JPMorgan Chase & Co (via Forage)",
       dateRange: "June 2026",
       certificateUrl:
-        "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_uLtkQSZM88LdYo2Lk_1782299405582_completion_certificate.pdf", // Add your link here
+        "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_uLtkQSZM88LdYo2Lk_1782299405582_completion_certificate.pdf", 
       points: [
         "Engineered enterprise microservices within a simulated JPMorgan Chase environment using Java, Spring Boot, and Maven to handle high-profile financial operations.",
         "Integrated Apache Kafka messaging infrastructure into a Spring application to establish secure, high-speed asynchronous data streams for transaction processing.",

@@ -57,7 +57,7 @@ const Certifications = () => {
       tags: ["DSA", "Problem Solving", "Algorithms"],
       image: DSA,
       credentialUrl:
-        "https://www.geeksforgeeks.org/batch/gfg-160-problems?_gl=1*1ilybfx*_up*MQ..*_gs*MQ..&gclid=CjwKCAjw6NrBBhB6EiwAvnT_rgZC3JkeV7heBwCZWC8Z-B9IU7PcwM867Hd14J0wDBGYXqiXsf_wrRoCKGwQAvD_BwE&gbraid=0AAAAAC9yBkDPcXI8PMOUD048RGMGc84Ct&tab=Resources",
+        "https://www.geeksforgeeks.org/certificate/cda06bba1502bab0bd96969037cd4741",
     },
     {
       title: "AWS APAC - Solutions Architecture Job Simulation",

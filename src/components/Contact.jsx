@@ -85,28 +85,6 @@ const Contact = ({ darkMode }) => {
             }}
             className="rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 border shadow-lg"
           >
-            {/* <div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6
-        sm:gap-8 md:gap-10 items-center"
-        >
-          <img
-            src={contactImg}
-            alt="Contact"
-            className="w-full max-w-xs sm:max-w-sm lg:max-w-md
-          h-auto object-contain"
-          />
-        </div>
-        <form
-          style={{
-            background: darkMode
-              ? "linear-gradient(to right, #1f2937, #111827)"
-              : "linear-gradient(to right, #ffffff, #f9fafb)",
-            borderColor: darkMode ? "#374151" : "#e5e7eb",
-          }}
-          className="rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 border
-          shadow-lg order-1 lg:order-2"
-          data-aos="fade-left"
-        > */}
             <div
               className="grid grid-cols-1 sm:grid-cols-2 gap-3
             sm:gap-4 mb-3 sm:mb-4"

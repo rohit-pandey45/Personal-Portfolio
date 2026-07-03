@@ -202,39 +202,6 @@ const Skills = ({ darkMode }) => {
             </p>
           </div>
 
-          {/* <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-16">
-            {skillCategories.map((category, index) => (
-              <div
-                key={index}
-                className={`p-5 rounded-xl border flex flex-col justify-between ${
-                  darkMode
-                    ? "bg-gray-800 border-gray-700"
-                    : "bg-white border-gray-200"
-                }`}
-              >
-                
-          <div>
-                <h3 className="text-lg font-bold text-orange-500 mb-4 min-h-[56px] flex items-center">
-                  {category.title}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, i) => (
-                    <span
-                      key={i}
-                      className={`text-xs font-medium px-2.5 py-1 rounded-md transition-colors ${
-                        darkMode
-                          ? "bg-gray-700/60 text-gray-300 border border-gray-600/40 hover:bg-gray-700"
-                          : "bg-gray-100 text-gray-700 border border-gray-200 hover:bg-gray-200"
-                      }`}
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div> */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-16">
             {skillCategories.map((category, index) => (
               <div

@@ -41,10 +41,12 @@ I am **Rohit Pandey**, an Electrical Engineering undergraduate with a strong int
 
 | Section | Description |
 |---|---|
+| Navbar | Containing all the sections |
 | Hero | Introduction with name, role, and quick stats |
 | About Me | Background, skills summary, and education highlights |
 | Education | Academic qualifications |
 | Experience | Internships and work experience |
+| Footer | Portfolio Designation |
 | Skills | Tech stack categorized by Frontend, Backend, DSA, and Tools |
 | Projects | Showcases projects with GitHub and live demo links |
 | Certifications | Verified certifications with credential links |
