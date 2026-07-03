@@ -138,7 +138,7 @@ const About = ({ darkMode }) => {
               </div>
             </div>
           </div>
-          <button
+          {/* <button
             className={`w-full sm:w-auto border-orange-500 inline-flex 
                 items-center justify-center py-2 px-4 sm:px-6 
                 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)] rounded-full 
@@ -152,7 +152,7 @@ const About = ({ darkMode }) => {
             data-aos-delay="800"
           >
             Learn more
-          </button>
+          </button> */}
         </article>
       </div>
     </section>
