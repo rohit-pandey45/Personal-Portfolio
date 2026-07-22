@@ -4,7 +4,20 @@ import { Briefcase, Calendar, ExternalLink } from "lucide-react";
 const Experience = ({ darkMode }) => {
   const experienceData = [
     {
-      title: "Web Development Intern",
+      title: "Web Developer Intern",
+      subtitle: "InAmigos Foundation",
+      dateRange: "July 2026",
+      certificateUrl:
+        "https://drive.google.com/file/d/1fcbxkQSc0_8b-WC13jd7-ff93KkQ-NTV/view?usp=sharing", 
+      points: [
+        "Conducted a full UX audit of the Foundation's live website, screenshotting every major page and compiling a prioritized report of real issues with fix recommendations.",
+        "Built a responsive NGO awareness website from scratch using HTML & CSS, based on research from the Foundation's official site and social channels.",
+        "Explored AI website-generator tools to rapidly prototype a multi-section site, comparing speed and quality against manual development.",
+        "Delivered all work as structured documents and files, with findings and outputs shared for stakeholder review.",
+      ],
+    },
+    {
+      title: "Full Stack Developer Intern",
       subtitle: "Axlero Innovative Solutions",
       dateRange: "July 2026 - Present",
       certificateUrl:
